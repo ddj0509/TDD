@@ -15,7 +15,7 @@ public class CourseSessionTest extends TestCase {
   public Date createDate(int year, int month, int day) {
     GregorianCalendar gregorianCalendar = new GregorianCalendar();
     gregorianCalendar.clear();
-    
+
     gregorianCalendar.set(Calendar.YEAR, year);
     gregorianCalendar.set(Calendar.MONTH, month - 1);
     gregorianCalendar.set(Calendar.DAY_OF_MONTH, day);
@@ -47,8 +47,16 @@ public class CourseSessionTest extends TestCase {
   }
 
   public void testCourseDates() {
-    Date sixteenWeekOut = createDate(2017,  4, 25);
+    Date sixteenWeekOut = createDate(2017, 4, 25);
     assertEquals(sixteenWeekOut, courseSession.getEndDate());
 
+  }
+
+  public void testRosterReport() {
+    courseSession.enroll(new Student("A"));
+    courseSession.enroll(new Student("B"));
+    assertEquals(CourseSession.ROSTER_REPORT_HEADER + "A" + CourseSession.NEWLINE + "B"
+        + CourseSession.NEWLINE + CourseSession.ROSTER_REPORT_FOOTER + "2" + CourseSession.NEWLINE,
+        courseSession.getRosterReport());
   }
 }

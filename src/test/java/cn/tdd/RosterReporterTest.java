@@ -1,9 +1,9 @@
-package test.java.cn.tdd;
+package cn.tdd;
 
-import main.java.cn.tdd.CourseSession;
-import main.java.cn.tdd.RosterReporter;
-import main.java.cn.tdd.Student;
-import main.java.cn.util.DateUtils;
+import cn.tdd.CourseSession;
+import cn.tdd.RosterReporter;
+import cn.tdd.Student;
+import cn.util.DateUtils;
 import junit.framework.TestCase;
 
 public class RosterReporterTest extends TestCase {

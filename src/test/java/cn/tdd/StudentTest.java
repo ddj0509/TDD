@@ -1,6 +1,6 @@
-package test.java.cn.tdd;
+package cn.tdd;
 
-import main.java.cn.tdd.Student;
+import cn.tdd.Student;
 import junit.framework.TestCase;
 
 public class StudentTest extends TestCase {

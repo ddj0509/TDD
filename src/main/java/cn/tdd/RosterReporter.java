@@ -1,4 +1,4 @@
-package main.java.cn.tdd;
+package cn.tdd;
 
 public class RosterReporter {
   public static final String NEWLINE = System.getProperty("line.separator");

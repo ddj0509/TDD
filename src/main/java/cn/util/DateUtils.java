@@ -1,4 +1,4 @@
-package main.java.cn.util;
+package cn.util;
 
 import java.util.Calendar;
 import java.util.Date;

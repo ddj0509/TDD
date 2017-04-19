@@ -1,4 +1,4 @@
-package main.java.cn.tdd;
+package cn.tdd;
 
 public class Student {
   private String name;

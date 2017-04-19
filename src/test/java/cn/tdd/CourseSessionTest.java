@@ -1,11 +1,11 @@
-package test.java.cn.tdd;
+package cn.tdd;
 
 import java.util.Date;
 
 import junit.framework.TestCase;
-import main.java.cn.tdd.CourseSession;
-import main.java.cn.tdd.Student;
-import main.java.cn.util.DateUtils;
+import cn.tdd.CourseSession;
+import cn.tdd.Student;
+import cn.util.DateUtils;
 
 public class CourseSessionTest extends TestCase {
   private CourseSession courseSession;

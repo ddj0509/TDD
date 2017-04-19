@@ -1,4 +1,4 @@
-package main.java.cn.tdd;
+package cn.tdd;
 
 import java.util.*;
 

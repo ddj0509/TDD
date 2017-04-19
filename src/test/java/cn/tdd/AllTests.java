@@ -1,4 +1,4 @@
-package test.java.cn.tdd;
+package cn.tdd;
 
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

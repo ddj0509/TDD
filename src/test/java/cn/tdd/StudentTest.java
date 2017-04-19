@@ -4,6 +4,7 @@ import main.java.cn.tdd.Student;
 import junit.framework.TestCase;
 
 public class StudentTest extends TestCase {
+  
   public void testCreate() {
     final String firstName = "ddj";
     Student student = new Student(firstName);

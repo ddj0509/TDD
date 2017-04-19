@@ -1,4 +1,4 @@
-package cn.tdd;
+package main.java.cn.tdd;
 
 /**
  * Hello world!

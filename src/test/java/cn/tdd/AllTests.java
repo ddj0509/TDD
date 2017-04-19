@@ -9,7 +9,7 @@ public class AllTests extends TestCase {
     TestSuite testSuite = new TestSuite();
     testSuite.addTestSuite(StudentTest.class);
     testSuite.addTestSuite(CourseSessionTest.class);
-
+    testSuite.addTestSuite(RosterReporterTest.class);
     return testSuite;
   }
 }

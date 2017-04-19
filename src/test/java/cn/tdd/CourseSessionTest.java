@@ -51,12 +51,4 @@ public class CourseSessionTest extends TestCase {
     assertEquals(sixteenWeekOut, courseSession.getEndDate());
 
   }
-
-  public void testRosterReport() {
-    courseSession.enroll(new Student("A"));
-    courseSession.enroll(new Student("B"));
-    assertEquals(CourseSession.ROSTER_REPORT_HEADER + "A" + CourseSession.NEWLINE + "B"
-        + CourseSession.NEWLINE + CourseSession.ROSTER_REPORT_FOOTER + "2" + CourseSession.NEWLINE,
-        courseSession.getRosterReport());
-  }
 }

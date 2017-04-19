@@ -10,8 +10,7 @@ import junit.framework.TestCase;
 public class DateUtilsTest extends TestCase{
   
   public void testCreateDate() {
-    DateUtils dateUtils = new DateUtils();
-    Date date = dateUtils.createDate(2017,  1, 12);
+    Date date = DateUtils.createDate(2017,  1, 12);
     GregorianCalendar gregorianCalendar = new GregorianCalendar();
     gregorianCalendar.setTime(date);
     assertEquals(2017, gregorianCalendar.get(Calendar.YEAR));

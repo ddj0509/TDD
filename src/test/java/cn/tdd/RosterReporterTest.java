@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 
 public class RosterReporterTest extends TestCase {
   public void testRosterReport() {
-    CourseSession courseSession = new CourseSession("ENGL", "101", new DateUtils().createDate(2017, 1, 6));
+    CourseSession courseSession = new CourseSession("ENGL", "101", DateUtils.createDate(2017, 1, 6));
     courseSession.enroll(new Student("A"));
     courseSession.enroll(new Student("B"));
 

@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class DateUtils {
-  public Date createDate(int year, int month, int day) {
+  public static Date createDate(int year, int month, int day) {
     GregorianCalendar gregorianCalendar = new GregorianCalendar();
     gregorianCalendar.clear();
 

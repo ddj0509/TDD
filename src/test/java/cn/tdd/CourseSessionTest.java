@@ -12,7 +12,7 @@ public class CourseSessionTest extends TestCase {
   private Date startDate;
 
   public void setUp() {
-    startDate = new DateUtils().createDate(2017, 1, 6);
+    startDate = DateUtils.createDate(2017, 1, 6);
     courseSession = new CourseSession("ENGL", "101", startDate);
   }
 
@@ -36,7 +36,7 @@ public class CourseSessionTest extends TestCase {
   }
 
   public void testCourseDates() {
-    Date sixteenWeekOut = new DateUtils().createDate(2017, 4, 25);
+    Date sixteenWeekOut = DateUtils.createDate(2017, 4, 25);
     assertEquals(sixteenWeekOut, courseSession.getEndDate());
 
   }

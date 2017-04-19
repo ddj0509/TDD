@@ -1,29 +1,18 @@
 package test.java.cn.tdd;
 
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 import junit.framework.TestCase;
 import main.java.cn.tdd.CourseSession;
 import main.java.cn.tdd.Student;
+import main.java.cn.util.DateUtils;
 
 public class CourseSessionTest extends TestCase {
   private CourseSession courseSession;
   private Date startDate;
 
-  public Date createDate(int year, int month, int day) {
-    GregorianCalendar gregorianCalendar = new GregorianCalendar();
-    gregorianCalendar.clear();
-
-    gregorianCalendar.set(Calendar.YEAR, year);
-    gregorianCalendar.set(Calendar.MONTH, month - 1);
-    gregorianCalendar.set(Calendar.DAY_OF_MONTH, day);
-    return gregorianCalendar.getTime();
-  }
-
   public void setUp() {
-    startDate = createDate(2017, 1, 6);
+    startDate = new DateUtils().createDate(2017, 1, 6);
     courseSession = new CourseSession("ENGL", "101", startDate);
   }
 
@@ -47,7 +36,7 @@ public class CourseSessionTest extends TestCase {
   }
 
   public void testCourseDates() {
-    Date sixteenWeekOut = createDate(2017, 4, 25);
+    Date sixteenWeekOut = new DateUtils().createDate(2017, 4, 25);
     assertEquals(sixteenWeekOut, courseSession.getEndDate());
 
   }

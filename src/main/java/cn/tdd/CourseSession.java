@@ -36,15 +36,15 @@ public class CourseSession {
   }
 
   public Student get(int index) {
-    return students.get(index);
+    return getStudents().get(index);
   }
 
   public int getNumberOfStudents() {
-    return students.size();
+    return getStudents().size();
   }
 
   public void enroll(Student student) {
-    students.add(student);
+    getStudents().add(student);
 
   }
 
@@ -65,12 +65,17 @@ public class CourseSession {
   public String getRosterReport() {
     StringBuilder buffer = new StringBuilder();
     buffer.append(ROSTER_REPORT_HEADER);
-    for (Student s : students) {
+    for (Student s : getStudents()) {
       buffer.append(s.getName());
       buffer.append(NEWLINE);
     }
     
-    buffer.append(ROSTER_REPORT_FOOTER + students.size() + NEWLINE);
+    buffer.append(ROSTER_REPORT_FOOTER + getStudents().size() + NEWLINE);
     return buffer.toString();
+  }
+
+
+  public ArrayList<Student> getStudents() {
+    return students;
   }
 }

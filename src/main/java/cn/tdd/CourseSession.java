@@ -7,12 +7,14 @@ public class CourseSession {
   private String number;
   private ArrayList<Student> students = new ArrayList<Student>();
   private Date startDate;
+  private int numberOfCredits;
   
   public CourseSession(String department, String number, Date date) {
     // TODO Auto-generated constructor stub
     this.department = department;
     this.number = number;
     this.startDate = date;
+    this.numberOfCredits = 0;
   }
 
 
@@ -41,8 +43,8 @@ public class CourseSession {
   }
 
   public void enroll(Student student) {
+    student.addCredits(this.numberOfCredits);
     getStudents().add(student);
-
   }
 
   public Date getEndDate() {
@@ -60,5 +62,10 @@ public class CourseSession {
 
   public ArrayList<Student> getStudents() {
     return students;
+  }
+
+
+  public void setNumberOfCredits(int cREDITS) {
+    this.numberOfCredits = cREDITS;
   }
 }

@@ -43,4 +43,15 @@ public class CourseSessionTest extends TestCase {
     Date sixteenWeekOut = DateUtils.createDate(2017, 4, 25);
     assertEquals(sixteenWeekOut, courseSession.getEndDate());
   }
+  
+  public void testComparable() {
+    final Date date= new Date();
+    CourseSession courseSession1 = new CourseSession("CMSC", "101", date);
+    CourseSession courseSession2 = new CourseSession("ENGL", "201", date);
+    assertTrue(courseSession1.compareTo(courseSession2) < 0);
+    assertTrue(courseSession2.compareTo(courseSession1) > 0);
+    
+    CourseSession courseSession3 = new CourseSession("ENGL", "201", date);
+    assertEquals(0, courseSession2.compareTo(courseSession3));
+  }
 }

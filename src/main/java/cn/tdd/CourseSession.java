@@ -2,13 +2,13 @@ package cn.tdd;
 
 import java.util.*;
 
-public class CourseSession {
+public class CourseSession implements Comparable<CourseSession> {
   private String department;
   private String number;
   private ArrayList<Student> students = new ArrayList<Student>();
   private Date startDate;
   private int numberOfCredits;
-  
+
   public CourseSession(String department, String number, Date date) {
     // TODO Auto-generated constructor stub
     this.department = department;
@@ -67,5 +67,14 @@ public class CourseSession {
 
   public void setNumberOfCredits(int cREDITS) {
     this.numberOfCredits = cREDITS;
+  }
+
+
+  public int compareTo(CourseSession o) {
+    int result = this.getDepartment().compareTo(o.getDepartment());
+    if (result == 0) {
+      result = this.getNumber().compareTo(o.getNumber());
+    }
+    return result;
   }
 }

@@ -5,7 +5,7 @@ import java.util.*;
 public class CourseSession implements Comparable<CourseSession> {
   private String department;
   private String number;
-  private ArrayList<Student> students = new ArrayList<Student>();
+  private List<Student> students = new ArrayList<Student>();
   private Date startDate;
   private int numberOfCredits;
 
@@ -60,7 +60,7 @@ public class CourseSession implements Comparable<CourseSession> {
     return startDate;
   }
 
-  public ArrayList<Student> getStudents() {
+  public List<Student> getStudents() {
     return students;
   }
 

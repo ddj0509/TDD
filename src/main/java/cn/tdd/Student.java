@@ -10,16 +10,11 @@ public class Student {
   private String state;
   private ArrayList<Grade> grades = new ArrayList<>();
   static final double GRADE_TOLERANCE = 5 / 100;
-  private boolean isHonors = false;
-
+  private GradingStrategy gradingStrategy = new RegularGradingStrategy();
+  
   enum Grade {
     A, B, C, D, F
   };
-
-
-  public void setHonors() {
-    this.isHonors = true;
-  }
 
   public Student(String name) {
     this.name = name;
@@ -64,31 +59,7 @@ public class Student {
   }
 
   public int gradePointsFor(Grade grade) {
-    int result = 0;
-    if(isHonors){
-      if (grade == Student.Grade.A) {
-        result = 5;
-      } else if (grade == Student.Grade.B) {
-        result = 4;
-      } else if (grade == Student.Grade.C) {
-        result = 3;
-      } else if (grade == Student.Grade.D) {
-        result = 2;
-      }
-    }
-    else{
-      if (grade == Student.Grade.A) {
-        result = 4;
-      } else if (grade == Student.Grade.B) {
-        result = 3;
-      } else if (grade == Student.Grade.C) {
-        result = 2;
-      } else if (grade == Student.Grade.D) {
-        result = 1;
-      }
-    }
-    
-    return result;
+    return gradingStrategy.getGradePointsFor(grade);
   }
 
   public double getGpa() {
@@ -106,5 +77,9 @@ public class Student {
 
   public void addGrade(Grade grade) {
     grades.add(grade);
+  }
+
+  public void setGradingStrategy(GradingStrategy gradingStrategy) {
+    this.gradingStrategy = gradingStrategy;
   }
 }

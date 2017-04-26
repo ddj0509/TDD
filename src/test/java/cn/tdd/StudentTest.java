@@ -81,7 +81,7 @@ public class StudentTest extends TestCase {
 
   private Student createHonorsStudent(Student student, Grade grade) {
     student.addGrade(grade);
-    student.setHonors();
+    student.setGradingStrategy(new HonorsGradingStrategy());
     return student;
   }
 
@@ -90,7 +90,7 @@ public class StudentTest extends TestCase {
   }
 
   Student createHonorsStudent(Student student) {
-    student.setHonors();
+    student.setGradingStrategy(new HonorsGradingStrategy());
     return student;
   }
 }
